@@ -14,7 +14,9 @@
         .module('eagleRepairsApp', [
                 'ngMessages',
                 'ui.router',
-                'eagleRepairsApp.states.home'
+                'eagleRepairsApp.states.home',
+                'mgcrea.ngStrap',
+                'ngAnimate'
         ]);
 
 }());

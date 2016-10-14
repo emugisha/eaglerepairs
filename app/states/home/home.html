@@ -1,17 +1,29 @@
 <section id="top-banner">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12 top-banner-base no-padding">
 
               <div class="jumbotron">
                 <div class="container">
                 <h2 class="blue">Certified Appliance Repair Experts</h2>
-                <p>Wherever you bought it, we’ll repair it.</p>
-                <br>
+                <p>Wherever you bought it, we’ll repair it</p>
+                <br><br>
+                <p class="warning"><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                  <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                  <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                  <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+                  <i class="fa fa-star-half-o fa-2x" aria-hidden="true"></i>
+                  <a href="#">  See our customers reviews</a></p>
 
-              
+                  <br>
+                  <br>
                   <div class="btn-group-vertical">
-                  <button type="button" class="btn btn-lg jumb-button" ng-href="#/"><span class="fa fa-calendar"></span>  Click To Schedule Today</button>
+                  <button type="button" class="btn btn-lg jumb-button"
+                          data-animation="am-fade-and-slide-top" 
+                          data-template-url = "components/booking/booking-modal.html"
+                          data-title = "Modal" 
+                          bs-modal="modal">
+                      <span class="fa fa-calendar"></span>  Click To Schedule Today</button>
                   <button type="button" class="btn btn-lg jumb-button-phone" ng-href="#/"> Or Call 1-888-213-2746</button>
                   </div>
                 </div>
@@ -21,3 +33,91 @@
         </div>
     </div>
 </section>
+<!--Services-->
+<section id="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 no-padding service-title">
+                <div class="col-sm-8 col-md-10 heading text-left ">
+                    <h3>Get same day service on any in-home appliance repair. </h3>
+                </div>
+                <div class="col-sm-4 col-md-2 button text-right">
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+            </div>
+            <div class="col-sm-12 service-base space">
+                <div class="col-sm-4 service-block">
+                    <div class="service-inner">
+                        <img src="http://nectargroups.com/garuda/img/key.png" alt="Services">
+                        <div class="service-text">
+                            <h4>WIDE RANGE OF APPLIANCES </h4>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas venenatis soll icitudin neque, ve Class aptent taci </p>
+                            <a href="#">Read More</a>
+                        </div>
+                        <div class="service-top-btn">
+                            <p class="top-btn">All Appliances</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 service-block">
+                    <div class="service-inner">
+                        <img src="http://nectargroups.com/garuda/img/key.png" alt="Services">
+                        <div class="service-text">
+                            <h4>ARCHITECTURE</h4>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas venenatis soll icitudin neque, ve Class aptent taci </p>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 service-block">
+                    <div class="service-inner">
+                        <img src="http://nectargroups.com/garuda/img/key.png" alt="Services">
+                        <div class="service-text">
+                            <h4>CONSULTING</h4>
+                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas venenatis soll icitudin neque, ve Class aptent taci </p>
+                            <a href="#">Read More</a>
+                        </div>
+                        <div class="service-top-btn">
+                            <p class="top-btn">Best Service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 brands space">
+                <div class="brands-main-heading text-center col-sm-12">
+                    <h2>Top appliance brands we repair</h2>
+                    <p>No matter where you bought it, we can fix it. We repair all major brands, makes, and models.</p>
+                </div>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center col-sm-2" ng-repeat="brand in home.brandsImages" >
+                <img alt="brand" ng-src="{{brand}}">
+            </div>
+        </div>
+                        
+    </div>
+</section>
+
+<hr>
+<div class="row">
+            <div class="col-sm-12 brands space">
+                <div class="brands-main-heading text-center col-sm-12">
+                    <h2>Customer reviews</h2>
+                    <p>All Reviews are from verified customers of Home Services.</p>
+                </div>  
+            </div>
+        </div>
+</div>
+<section> 
+
+</section>
+<!-- end Certifications -->

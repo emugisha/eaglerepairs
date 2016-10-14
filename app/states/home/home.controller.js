@@ -10,8 +10,17 @@
         this.awesomeThings = [
             'Eagle',
             'AngularJS',
-            'Karma'
+            'Karma',
+            'bruh'
             ];
+
+        vm.brandsImages = ['images/brands/kenmore.png',
+                           'images/brands/whirlpool.png',
+                           'images/brands/frigidaire.png',
+                           'images/brands/maytag.png',
+                           'images/brands/ge.png',
+                           'images/brands/lg.png'];
+     
     }
 
 }());

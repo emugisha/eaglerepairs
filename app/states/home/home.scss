@@ -1,12 +1,141 @@
+//----Jumbotron---
+
 .jumbotron {
 background: #000 url("https://assets.searshomeservices.com/images/hero/HeroV3ReparT1.jpg") no-repeat center center;
 background-size: 100% 100%;
 -moz-background-size: 100% 100%;
 -webkit-background-size: 100% 100%;
 -o-background-size: 100% 100%;
+ border-top:10px;
+ border-top-color:#1c3254; 
+ margin-bottom: 0px;
+
 //color: $yellow; // change text color
+}
+
+.jumb-button{
+    background: #1c3254;
+    border-color: #1c3254;
+    color: #fff !important;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.jumb-button-phone{
+  background: #fff;
+  border-color: #1c3254;
+  border-top:0;
+  color: $warning !important;
+}
+
+.jumb-button:hover{
+    background: $warning;
+    border-color: $warning;
+    color: #fff !important;
 }
 
 .blue{
     color:$success;
 }
+
+.warning{
+    color:$warning;
+}
+
+//------------Services------------
+.service-top-btn .top-btn,
+.news-top-btn .top-btn {
+    background-color: #1c3254;
+    border: medium none;
+    color: #fff;
+    font-size: 13px;
+    padding: 3px 15px;
+}
+
+.service-top-btn .top-btn::before,
+.news-top-btn .top-btn::before {
+    border-color: #595959 transparent transparent;
+    border-style: solid;
+    border-width: 7px 0 4px 7px;
+    bottom: -11px;
+    content: "";
+    height: 7px;
+    left: 0;
+    position: absolute;
+    width: 5px;
+}
+.aside h4,
+.service-block h4 {
+    color: #34404e;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.service-title {
+    padding: 40px 0;
+}
+
+ .service-title h3 {
+    margin: 0;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+ .service-title::before {
+    bottom: 0;
+    content: "";
+    left: -100%;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background-color: #EFBB20;
+}
+
+.service-top-btn,
+.news-top-btn {
+    left: -7px;
+    position: absolute;
+    top: 12px;
+}
+
+.service-block .service-text {
+    border: medium none;
+    padding-left: 0;
+    padding-right: 0;
+}
+.service-block ul {
+    margin-top: 12px;
+    padding-left: 20px;
+}
+.service-block ul li::before {
+    bottom: 0;
+    color: #efbb20;
+    content: "\f00c";
+    font-family: fontawesome;
+    font-size: 14px;
+    left: -19px;
+    position: absolute;
+    top: 0;
+}
+
+.service-block .service-text{
+    padding: 20px;
+    border: 1px solid #ecebeb;
+    border-top: none;
+    background-color: #fff;
+}
+.brands-main-heading h2,
+{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.brands-main-heading p {
+    font-size: 14px;
+}
+.brands{
+  padding-top: 0px;
+}  
