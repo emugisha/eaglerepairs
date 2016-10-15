@@ -1,6 +1,8 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $warning:#efbb20;
 $success: #34404e;
+$inactive-text: #727272;
+$inactive-border: #b6b6b6;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 @import "components-font-awesome/scss/font-awesome.scss";
@@ -148,6 +150,17 @@ footer .copy-right {
       opacity: 0;
     }
   }
+}
+
+.active-step p{
+    border-bottom: solid 2px $success;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.inactive-step p{
+    border-bottom: solid 2px $inactive-border;
+    color: $inactive-text;
 }
 
 

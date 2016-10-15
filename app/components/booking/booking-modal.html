@@ -1,11 +1,27 @@
-<div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
+<div class="modal" tabindex="-1" style="width:100%" role="dialog">
+    <div class="modal-dialog" style="width:80%">
         <div class="modal-content">
             <div class="modal-header" ng-show="title">
-                <button type="button" class="close" ng-click="$hide()">&times;</button>
-                <h4 class="modal-title" ng-bind="title">Hello, World!</h4>
+                <button type="button" class="close" ng-click="$hide()" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" ng-bind="title"></h4>
             </div>
-            <div class="modal-body" ng-bind="content">Lorem ipsum dolor.</div>
+            <div class="modal-body">
+                
+                <div class="row">
+                    <div class="col-md-4" ng-class="{'active-step' : !$ctrl.step ===1, 'inactive-step':$ctrl.step}"
+                        <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="col-md-4" ng-class="{'active-step' : !$ctrl.step ===1, 'inactive-step':$ctrl.step}"
+                        <p class="text-center">Contact Information</p>
+                    </div>
+                    <div class="col-md-4" ng-class="{'active-step' : !$ctrl.step ===1, 'inactive-step':$ctrl.step}"
+                        <p class="text-center">Contact Information</p>
+                    </div>
+                </div>
+                <hr>
+                <p>I am a modal</>
+
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" ng-click="$hide()">Close</button>
             </div>
