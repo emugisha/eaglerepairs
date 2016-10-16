@@ -15,6 +15,7 @@
                 'ngMessages',
                 'ui.router',
                 'eagleRepairsApp.states.home',
+                'eagleRepairsApp.components.booking',
                 'mgcrea.ngStrap',
                 'ngAnimate'
         ]);

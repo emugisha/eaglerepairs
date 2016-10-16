@@ -1,6 +1,7 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $warning:#efbb20;
 $success: #34404e;
+$success2:#337ab7;
 $inactive-text: #727272;
 $inactive-border: #b6b6b6;
 // bower:scss
@@ -152,17 +153,42 @@ footer .copy-right {
   }
 }
 
+.first-step{
+    padding-right:1px
+}
+.last-step{
+    padding-left: 1px;
+}
+.middle-step{
+    padding-left:1px;
+    padding-right:1px;
+}
+.modal-top-text{
+    font-size:16px;
+}
 .active-step p{
-    border-bottom: solid 2px $success;
-    font-weight: bolder;
+    border-bottom: solid 6px $success2;
+    color: $success2;
     text-align: center;
 }
 
 .inactive-step p{
-    border-bottom: solid 2px $inactive-border;
+    border-bottom: solid 6px $inactive-border;
     color: $inactive-text;
+    text-align: center;
 }
 
+.booking-area{
+    border-right: 2px;
+}
+
+.booking-area h1{
+    font-size:18px;
+}
+
+.booking-shop h1{
+    font-size:18px;
+}
 
 
 
