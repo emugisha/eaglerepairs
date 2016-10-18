@@ -2,7 +2,8 @@
     'use strict';
     angular
         .module('eagleRepairsApp')
-        .config(routes);
+        .config(routes)
+        .constant('_', window._);
 
 
     function routes($urlRouterProvider){
