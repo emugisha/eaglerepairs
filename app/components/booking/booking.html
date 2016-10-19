@@ -13,23 +13,10 @@
     </div>
 </div>
 <br>
-<div class="row">
-    <div class="col-md-12 booking-area text-center">
-        <h1>Which appliance is broken?</h1>
-        <p>Choose from the list below:</p>
-        <hr>
+<div class="row">  
+    <appliance-info ng-show="$ctrl.step===1" on-done="$ctrl.gotoStep2(appliance)"></appliance-info>
 
-        
-        <div class="row" style="margin-left:10px">
-            <div class="col-md-4" ng-repeat="group in $ctrl.groupedAppliances">
-                <ul>
-                <li ng-repeat="appliance in group" style="text-align:left; font-size:15px;"><a href="">{{appliance}}</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
+    <user-info ng-show="$ctrl.step===2" booking="$ctrl.booking" on-done="$ctrl.gotoStep3(booking)"></user-info>
     <!-- Will be added later
     <div class="col-md-4">
         <h4> Check our used Appliance inventory</h4>
