@@ -365,7 +365,7 @@ Top bar
 #topbar ul li,
 #topbar ul li a {
     color: #bdbdbd;
-    font-size: 90%;
+    font-size: 100%;
     line-height: 15px;
 }
 
@@ -409,11 +409,15 @@ section#top-bar{
     border: medium none;
 }
 
-#topbar ul.social li {
+#topbar ul.login-top li {
     height: 17px;
     margin: 0 -1px;
     padding: 1px 9px;
     width: auto;
+}
+
+#topbar ul.login-top li:hover a {
+     color: #EFBB20;
 }
 
 /*
@@ -632,4 +636,20 @@ section#header-upper {
 }
 .sp-contact-info {
     margin: 0 -10px;
+}
+
+.btn-service-title {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    padding: 8px 30px;
+    text-transform: capitalize;
+}
+
+.btn-service-title:hover {
+    background-color: #fff;
+    color: #EFBB20;
 }

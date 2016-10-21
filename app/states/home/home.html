@@ -13,7 +13,7 @@
                   <i class="fa fa-star fa-2x" aria-hidden="true"></i>
                   <i class="fa fa-star fa-2x" aria-hidden="true"></i>
                   <i class="fa fa-star-half-o fa-2x" aria-hidden="true"></i>
-                  <a href="#">  See our customers reviews</a></p>
+                  <a ng-click="home.gotoReviews()" href="">  See our customers reviews</a></p>
 
                   <br>
                   <br>
@@ -25,7 +25,7 @@
                           data-container='body'
                           bs-modal>
                       <span class="fa fa-calendar"></span>  Click To Schedule Today</button>
-                  <button type="button" class="btn btn-lg jumb-button-phone" ng-href="#/"> Or Call 1-888-213-2746</button>
+                  <button type="button" class="btn btn-lg jumb-button-phone" href="tel:+1-301-220-2838"> Or Call 1-301-220-2838</button>
                   </div>
                 </div>
               </div>
@@ -43,20 +43,22 @@
                     <h3>Get same day service on any in-home appliance repair. </h3>
                 </div>
                 <div class="col-sm-4 col-md-2 button text-right">
-                    <a href="#" class="btn">Learn more</a>
+                    <a href="#" class="btn btn-service-title">Learn more</a>
                 </div>
             </div>
             <div class="col-sm-12 service-base space">
                 <div class="col-sm-4 service-block">
                     <div class="service-inner">
-                        <img src="http://nectargroups.com/garuda/img/key.png" alt="Services">
+                        <img src="images/service1.jpg" height="300" width="600" alt="Services">
                         <div class="service-text">
                             <h4>WIDE RANGE OF APPLIANCES </h4>
-                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas venenatis soll icitudin neque, ve Class aptent taci </p>
-                            <a href="#">Read More</a>
+                            <p>Our technicians are trained to repair all the the major brands. 
+                               Over the past years we have come across every major brand of appliance and we have not had an issue we could not resolve.
+                                Click below to see a few of the major brands we repair.</p>
+                            <a href="" ng-click="home.gotoReviews()">Learn More</a>
                         </div>
                         <div class="service-top-btn">
-                            <p class="top-btn">All Appliances</p>
+                            <p class="top-btn">Top Appliances</p>
                         </div>
                     </div>
                 </div>
@@ -64,9 +66,13 @@
                     <div class="service-inner">
                         <img src="http://nectargroups.com/garuda/img/key.png" alt="Services">
                         <div class="service-text">
-                            <h4>ARCHITECTURE</h4>
-                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas venenatis soll icitudin neque, ve Class aptent taci </p>
-                            <a href="#">Read More</a>
+                            <h4>TOP QUALITY REPAIRS</h4>
+                            <p>At EagleStar Repairs we strive to build a lasting relationship through quality customer service. 
+                                All of our technician's are industry trained professionals and are experienced working on all major makes and models of home appliances.</p>
+                            <a  href="#">Learn More</a>
+                        </div>
+                         <div class="service-top-btn">
+                            <p class="top-btn">Unparalleled Service</p>
                         </div>
                     </div>
                 </div>
@@ -74,12 +80,13 @@
                     <div class="service-inner">
                         <img src="http://nectargroups.com/garuda/img/key.png" alt="Services">
                         <div class="service-text">
-                            <h4>CONSULTING</h4>
-                            <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas venenatis soll icitudin neque, ve Class aptent taci </p>
-                            <a href="#">Read More</a>
+                            <h4>A wide range of used appliances</h4>
+                            <p>In addition to repairing appliances, we offer a wide range of used appliances to choose from. Our technicians thoroughly test these appliances to eliminate all 
+                                defects. Check out our online inventory and get free delivery of your appliance.</p>
+                            <a href="#">Learn More</a>
                         </div>
                         <div class="service-top-btn">
-                            <p class="top-btn">Best Service</p>
+                            <p class="top-btn">Used Appliances</p>
                         </div>
                     </div>
                 </div>
@@ -100,25 +107,141 @@
             </div>
         </div>
         <div class="row">
-            <div class="text-center col-sm-2" ng-repeat="brand in home.brandsImages" >
+            <div class="text-center col-sm-2" ng-repeat="brand in home.brandsImages1" >
                 <img alt="brand" ng-src="{{brand}}">
             </div>
         </div>
+        <br><br>
+        <div class="row">
+            <div class="text-center col-sm-2" ng-repeat="brand in home.brandsImages2" >
+                <img alt="brand" ng-src="{{brand}}">
+            </div>
+        </div>
+        <br>
+        <h4 class="text-center"><a href="#"><span class="success">See the complete list of brands we repair</span></a> </h4>
                         
     </div>
 </section>
 
 <hr>
-<div class="row">
-            <div class="col-sm-12 brands space">
-                <div class="brands-main-heading text-center col-sm-12">
-                    <h2>Customer reviews</h2>
-                    <p>All Reviews are from verified customers of Home Services.</p>
-                </div>  
-            </div>
-        </div>
-</div>
-<section> 
+<section id="reviews">
+     <div class="container">
+           
+                <div class="brands-main-heading text-center">
+                    <h2>Customer Reviews</h2>
+                    <p>All Reviews are from verified customers one Home Advisor.</p>
+                </div>
+        
+                <hr>
+                <div class="row">
 
-</section>
-<!-- end Certifications -->
+                <div class="col-sm-4">
+                <p><i class="fa fa-star warning"></i><i class="fa fa-star warning" ></i><i class="fa fa-star warning"></i><i class="fa fa-star warning"></i><i class="fa fa-star-half-o warning"></i>
+                     | <span class="success"><b>College Park, MD</b></span>
+                </p>
+                  <p><b>Review by Ann B. </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                    Our refrigerator/freezer stopped working late Sunday afternoon. My first response was to call Sears and was stunned when they said their first available appointment was a week away<span id="rev1" class="collapse">I have never used HomeAdvisor and was pleasantly surprised when I received two responses to my request Sunday night. We chose Eagle Star because they were the first to respond and were very impressed with their prompt and professional service. I would hire them again.</span> 
+                    <a href="#rev1" data-toggle="collapse"> More</a></p>
+
+                    <br>
+                <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Germantown, MD</b></span></p>
+                  <p><b>Review by Susan M. </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                   Gave Harry the model number of the stove. He confirmed he had the oven element needed, which he brought to the job. He installed it and tested to make sure it was working before leaving, This is a rental property and I was able to get the repair done without having to go to the tenant's house.</p>
+               
+                    <br>
+                <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Hyatsville, MD</b></span></p>
+                  <p><b>Review by Francis Gregory </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                   My mom thought the repair guy was so professional and on time. She can not wait to have them back for something else. She speaks highly of Eagle Star. Harry was honest and charge what he quoted. I saved a lot by not hiring Sears. My mom lives in Adelphi, MD.</p>
+                </div> 
+
+                <!--Second column-->
+                <div class="col-sm-4">
+                <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Baltimore, MD</b></span></p>
+                  <p><b>Review by Leticia R. </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                     Best experience ever! Harry is a guy that you can rely on. He says he'll show up on time, and he does. He charges a fair price. He was thorough in his evaluation and explained what was wrong, 
+                      <span id="rev2" class="collapse">how he would fix it, how much it would cost, what might go wrong --to look for in the functioning of the machine-- and for how long his job was guaranteed. He is serious about his job. He showed up on Super Bowl Sunday. When I asked him if he was serious, he said: "The Super Bowl doesn't pay my bills". And sure enough, he was on time.</span>
+                      <a href="#rev2" data-toggle="collapse"> More</a>
+                      </p>
+                    <br>
+
+                    <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Lanham, MD</b></span></p>
+                  <p><b>Review by Sylvania W. </b><br>
+                     <b>Project:</b>  Install or Replace a Major Electric Appliance<br>
+                   Did outstanding job, five (5) stars all the way. On time. Good price. Good workmanship and really nice person. Did work in a timely manner. I have already recommended him (within a few days) to a friend. Will use him again for additional work around my home.
+                   </p>
+                   <br>
+
+                   <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>University Park, MD</b></span></p>
+                  <p><b>Review by Ray </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                   Harry was wonderful! He called within 3 minutes. Discussed the problem and told us what could be wrong. Arrived to repair within 2 hours. Bought the parts and finished the repair within an hour. Where else can you get that kind of service?? On time and for the cost quoted. Would definitely hire again for other jobs.</p>
+
+                </div>  
+
+                <!--Third column-->
+                <div class="col-sm-4">
+                    <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Capitol Heights, MD</b></span></p>
+                  <p><b>Review by a homeowner </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                    Harry is a true professional. He's punctual, polite, and puts his clients first. He has a high degree integrity and absolutely knows what he's doing. I had a gas leak coming from my stove. I had 
+                      <span id="rev3" class="collapse">a different appliance contractor come out to check it. He brought a gas meter with him but could not find the leak or even smell it. I felt like I wasted my money for his diagnosis time and got no repair. Harry with Eagle Star came out and with out a gas detector found the problem and was able to take care of it! He even took care of a 2nd appliance is for me at the same time! He was fabulous ! Gave me a great deal! And his service was exceptional. I highly recommend Harry with Eagle Star Appliance Repair! Sincerely CLM</span>
+                      <a href="#rev3" data-toggle="collapse"> More</a>
+                      </p>
+                    <br>
+                    <p><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Silver Spring, MD</b></span></p>
+                  <p><b>Review by Mark M. </b><br>
+                     <b>Project:</b> Repair or Service an Appliance<br>
+                    Harry diagnosed the problem over the phone and came the next morning on time. I learned quite a bit about dryer repairs just by watching him and listening to his explanations.</p>
+                   
+                   <br>
+                   <p class=""><i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning" ></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star warning"></i>
+                  <i class="fa fa-star-half-o warning"></i> | <span class="success"><b>Laurel, MD</b></span></p>
+                  <p><b>Review by Robin M. </b><br>
+                     <b>Project:</b>  Install or Replace a Major Electric Appliance<br>
+                   I must admit I was skeptical about using Home Advisors even though two of my coworkers recommended it. I selected Eagle Star from the list of Pro because of the other great reviews. They were right on point. The Eagle Star representative arrived on time, was courteous, knowledgeable, willing to explain what he was doing and why and was quick to get it done. I will be using Home Advisor and Eagle Star again.</p>
+                </div>
+
+                <h4 class="text-center"><a href="http://www.homeadvisor.com/rated.EagleStarAppliances.49625497.html" target="_blank">
+                  <span class="warning">See all reviews on Home Advisor</span></a> 
+                </h4>
+                </div>
+
+            </div>
+        
+    </section>
+
