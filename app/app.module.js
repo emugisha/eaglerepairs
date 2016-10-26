@@ -3,9 +3,9 @@
 
 /**
  * @ngdoc overview
- * @name eaglerepairsApp
+ * @name eagleRepairsApp
  * @description
- * # eaglerepairsApp
+ * # eagleRepairsApp
  *
  * Main module of the application.
  */
