@@ -1,0 +1,15 @@
+
+<div class="row">
+<div class="col-md-12 booking-area text-center" >
+        <h1 ng-show="$ctrl.viewAppliances">Which appliance is broken?</h1>
+        <p ng-show="$ctrl.viewAppliances">Choose from the list below:</p>
+        <h1 ng-show="$ctrl.viewBrands">What brand is the appliance?</h1>
+        <hr>
+ <appliances on-select="$ctrl.showBrands(appliance)" ng-show="$ctrl.viewAppliances"></appliances>
+ <brands on-select="$ctrl.addBrand(brand)" ng-show="$ctrl.viewBrands"></brands>
+ <div class="modal-footer">
+        <button type="submit" class="btn btn-default">Cancel</button>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,8 @@
+<div class="row" style="margin-left:10px">
+    <div class="col-md-4" ng-repeat="group in $ctrl.groupedAppliances">
+        <ul>
+        <li ng-repeat="appliance in group" style="text-align:left; font-size:15px;"><a href="" ng-click="$ctrl.returnAppliance(appliance)">{{appliance}}</a></li>
+        </ul>
+    </div>
+
+</div>

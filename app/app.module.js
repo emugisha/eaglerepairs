@@ -17,7 +17,8 @@
                 'eagleRepairsApp.states.home',
                 'eagleRepairsApp.components.booking',
                 'mgcrea.ngStrap',
-                'ngAnimate'
+                'ngSanitize',
+                'hm.readmore'
         ]);
 
 }());

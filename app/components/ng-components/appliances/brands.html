@@ -1,0 +1,6 @@
+<div class="row" style="margin-left:10px"> 
+    <div class="col-md-4" ng-repeat="group in $ctrl.groupedBrands">
+        <ul>
+        <li ng-repeat="brand in group" style="text-align:left; font-size:15px;"><a href="" ng-click="$ctrl.addBrand(brand)">{{brand}}</a></li>
+        </ul>
+</div>

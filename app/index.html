@@ -81,7 +81,7 @@
 </header>
 
     <section class="middle-view">
-    <ui-view></ui-view>
+        <ui-view></ui-view>
     </section>
 
     <!-- footer upper -->
@@ -167,6 +167,8 @@
     <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-read-more/dist/readmore.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -175,10 +177,14 @@
          <script src="app.config.js"></script>
          <script src="states/home/home.config.js"></script>
          <script src="states/home/home.controller.js"></script>
-         <script src="components/booking/booking.module.js"></script>
-         <script src="components/booking/booking.component.js"></script>
-         <script src="components/booking/user-info.component.js"></script>
-         <script src="components/booking/appliance-info.component.js"></script>  
+         <script src="components/ng-components/booking/booking.module.js"></script>
+         <script src="components/ng-components/booking/booking.component.js"></script>
+         <script src="components/ng-components/booking/user-info.component.js"></script>
+         <script src="components/ng-components/booking/availability-info.component.js"></script>
+         <script src="components/ng-components/booking/appliance-info.component.js"></script>  
+         <script src="components/ng-components/booking/review.component.js"></script>
+         <script src="components/ng-components/appliances/appliances.component.js"></script> 
+         <script src="components/ng-components/appliances/brands.component.js"></script> 
         <!-- endbuild -->
 </body>
 </html>

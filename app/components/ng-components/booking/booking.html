@@ -1,3 +1,4 @@
+
 <div class="row text-center modal-top-text">
     <div class="col-md-3 first-step" ng-class="{'active-step' : $ctrl.step ===1, 'inactive-step':$ctrl.step !==1}">
         <p>Choose Appliance</p>
@@ -17,9 +18,13 @@
     <appliance-info ng-show="$ctrl.step===1" on-done="$ctrl.gotoStep2(appliance)"></appliance-info>
 
     <user-info ng-show="$ctrl.step===2" booking="$ctrl.booking" on-done="$ctrl.gotoStep3(booking)"></user-info>
+
+    <availability-info ng-show="$ctrl.step===3" booking="$ctrl.booking" on-done="$ctrl.gotoStep4(booking)"></availability-info>
+    
+    <review ng-show="$ctrl.step===4" booking="$ctrl.booking"></review>
     <!-- Will be added later
     <div class="col-md-4">
         <h4> Check our used Appliance inventory</h4>
     </div>-->
 </div>
-
+</div>

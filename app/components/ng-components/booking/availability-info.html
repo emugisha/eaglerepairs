@@ -1,0 +1,39 @@
+<div class="col-md-12 booking-area text-center">
+<h1>Availability Information </h1>
+<p>When can our Technician come to inspect your {{$ctrl.booking.appliance.applianceName}}</p>
+<hr>
+<form class="form-horizontal col-md-offset-2" ng-submit="$ctrl.addAvailabilityInfo()">
+    <div class="form-group">
+    <label for="firstName" class="control-label col-sm-2"><i class="fa fa-calendar"></i>Date</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control"  data-min-date="{{$ctrl.fromDate}}" data-autoclose="true" ng-model="$ctrl.booking.availability.date" bs-datepicker>
+    </div>
+  </div>
+
+   <div class="form-group">
+    <label for="firstName" class="control-label col-sm-2"><i class="fa fa-clock-o"></i></i>From</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" ng-model="$ctrl.fromTime" data-time-type="number" name="from" bs-timepicker>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="firstName" class="control-label col-sm-2"><i class="fa fa-clock-o"></i>To</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" ng-model="$ctrl.toTime" data-time-type="number" name="to" bs-timepicker>
+    </div>
+  </div>
+
+   <div class="form-group">
+    <label for="city" class="col-sm-2 control-label">Brief Description</label>
+    <div class="col-sm-5">
+       <textarea class="form-control" rows="3" placeholder="Enter a brief description of your appliance problem"></textarea>
+    </div>
+  </div>
+ <div class="modal-footer">
+        <button class="btn btn-default">Back</button>
+        <button type="submit" class="btn btn-primary">Next</button>
+  </div>
+</form>
+
+</div>
