@@ -8,16 +8,22 @@
             controller : userController,
             bindings:{
                 booking:'<',
-                onDone:'&'
+                onDone:'&',
+                onBack:'&'
             }
         });
 
         function userController(){
             var vm = this;
             vm.addUserInfo = addUserInfo;
+            vm.goBack = goBack;
 
             function addUserInfo(){
                 vm.onDone({booking:vm.booking});
+            }
+
+            function goBack(){
+                vm.onBack({step: 1});
             }
             
         }

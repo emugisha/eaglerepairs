@@ -9,12 +9,22 @@
             controller : reviewController,
             bindings:{
                 booking:'<',
-                onDone:'&'
+                onDone:'&',
+                onBack:'&'
             }
         });
 
         function reviewController(){
             var vm = this; 
+            vm.goBack = goBack;
+            vm.submitBooking = submitBooking;
+
+            function goBack(){
+                vm.onBack();
+            }
+            function submitBooking(){
+                
+            }
         }
 
 }());

@@ -9,7 +9,8 @@
             controller : availabilityInfoController,
             bindings:{
                 booking:'<',
-                onDone:'&'
+                onDone:'&',
+                onBack:'&'
             }
         });
 
@@ -17,9 +18,13 @@
             var vm = this; 
             vm.addAvailabilityInfo = addAvailabilityInfo;
             vm.fromDate = new Date(); 
-
+            vm.goBack = goBack;
             function addAvailabilityInfo(){
                 vm.onDone({booking: vm.booking});
+            }
+
+            function goBack(){
+                vm.onBack();
             }
         }
 

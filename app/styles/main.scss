@@ -196,6 +196,48 @@ footer .copy-right {
      display: none !important;
 }
 
+.form-error{
+    font-size:13px;
+    color:$brand-danger;
+}
+
+form.ng-submitted, form.ng-dirty .ng-invalid {
+  border-color: $brand-danger;
+  border-width: 1px;
+} 
+
+//For the ng-strap time picker and date picker
+.datepicker.dropdown-menu {
+  width: 250px;
+  height: 250px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody {
+    height: 180px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+    tbody button {
+      height: 65px;
+    }
+  }
+}
+
+.timepicker.dropdown-menu {
+  padding: 0 4px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+}
+
 
 
 

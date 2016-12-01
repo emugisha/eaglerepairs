@@ -4,53 +4,46 @@
 
 <div class="panel panel-default col-md-8 col-md-offset-2">
     <div class="panel-body">
-    <table class="table">
+    <table class="table" style="font-size:16px;">
      <tbody>
       <tr >
-        <td style="border-top:0px"><span class="col-md-3"><b>Appliance Type</b></span>
-        <span span class="col-md-5">Fridge</span>
+        <td style="border-top:0px"><span class="col-md-3">Appliance Type</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.appliance.applianceType}}</span>
         </td> 
       </tr>
       <tr>
-        <td><span class="col-md-3"><b>Appliance Brand</b></span>
-        <span span class="col-md-5">Fridge</span>
+        <td><span class="col-md-3">Appliance Brand</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.appliance.brand}}</span>
         </td> 
       </tr>
       <tr>
-        <td><span class="col-md-3"><b>Name</b></span>
-        <span span class="col-md-5">Fridge</span>
+        <td><span class="col-md-3">Name</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.client.firstName}} {{$ctrl.booking.client.lastName}}</span>
         </td> 
       </tr>
       <tr>
-        <td><span class="col-md-3"><b>City</b></span>
-        <span span class="col-md-5">Fridge</span>
+        <td><span class="col-md-3">City</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.client.city}}</span>
         </td> 
       </tr>
       <tr>
-        <td><span class="col-md-3"><b>Phone Number</b></span>
-        <span span class="col-md-5">Fridge</span>
+        <td><span class="col-md-3">Phone Number</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.client.phone}}</span>
         </td> 
       </tr>
 
       <tr>
-        <td><span class="col-md-3"><b>Availabilty</b></span>
-        <span span class="col-md-5">Fridge @ 2:00</span>
-        </td> 
-      </tr>
-      <tr>
-        <td><span class="col-md-3"><b>Defect Description</b></span>
-        <span span class="col-md-5">Fridge</span>
+        <td style="border-bottom:1px"><span class="col-md-3">Availabilty</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.availability.date | date:'shortDate'}} from {{$ctrl.booking.availabilty.earliestTime | date:'h:mm a' }} to {{$ctrl.booking.availabilty.latestTime | date:'h:mm a'}}</span>
         </td> 
       </tr>
     </tbody>
 
         </table>
-        
-
     </div>
     <div class="modal-footer">
-        <button class="btn btn-default">Back</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button class="btn btn-warning" ng-click="$ctrl.goBack()">Back</button>
+        <button ng-click="$ctrl.submitBooking" class="btn btn-primary">Submit</button>
   </div>
   </div>
   
