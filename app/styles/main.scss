@@ -238,6 +238,19 @@ form.ng-submitted, form.ng-dirty .ng-invalid {
   }
 }
 
+.icon-color-1{
+    color: #1c3254;
+}
+.fa-square:hover {
+    color: #EFBB20;
+}
+
+.icon-color-2{
+    color: $warning;
+}
+.icon-color-3{
+    color:#fff;
+}
 
 
 
