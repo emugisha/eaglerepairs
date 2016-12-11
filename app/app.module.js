@@ -12,12 +12,14 @@
 
     angular
         .module('eagleRepairsApp',
-			 [
+				[
                 'ngMessages',
                 'ui.router',
                 'eagleRepairsApp.states.home',
                 'eagleRepairsApp.states.about',
+                'eagleRepairsApp.states.contact',
                 'eagleRepairsApp.components.booking',
+                'eagleRepairsApp.states.login',
                 'mgcrea.ngStrap',
                 'ngSanitize',
                 'hm.readmore',

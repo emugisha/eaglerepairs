@@ -252,6 +252,56 @@ form.ng-submitted, form.ng-dirty .ng-invalid {
     color:#fff;
 }
 
+//-----Contact page--
+#contact .contact-item .icon {
+    font-size: 30px;
+    height: 50px;
+    width: 47px;
+    justify-content: flex-start;
+}
 
+#contact .contact-item i {
+    color: #f2c84a;
+}
 
+#contact .contact-block:first-child .contact-item {
+    padding-left: 30px;
+}
+
+#contact .contact-block:last-child {
+    padding-left: 0;
+}
+
+.contact .main-heading h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#contact .contact-item h5 {
+    color: #34404e;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+#contact .contact .contact-text {
+    display: table;
+    padding-left: 15px;
+}
+
+#contact .contact .contact-text::before {
+    border-left: 1px solid hsl(0, 0%, 20%);
+    bottom: 14px;
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 14px;
+}
+
+#contact .contact-item:not(:last-child) {
+    margin-bottom: 45px;
+}
+
+#contact .contact-text a {
+    color: #777;
+}
 
