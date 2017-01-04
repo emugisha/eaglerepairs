@@ -18,23 +18,23 @@
       </tr>
       <tr>
         <td><span class="col-md-3">Name</span>
-        <span span class="col-md-5 text-primary">{{$ctrl.booking.client.firstName}} {{$ctrl.booking.client.lastName}}</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.clientDetails.firstName}} {{$ctrl.booking.clientDetails.lastName}}</span>
         </td> 
       </tr>
       <tr>
         <td><span class="col-md-3">City</span>
-        <span span class="col-md-5 text-primary">{{$ctrl.booking.client.city}}</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.clientDetails.city}}</span>
         </td> 
       </tr>
       <tr>
         <td><span class="col-md-3">Phone Number</span>
-        <span span class="col-md-5 text-primary">{{$ctrl.booking.client.phone}}</span>
+        <span span class="col-md-5 text-primary">{{$ctrl.booking.clientDetails.phone}}</span>
         </td> 
       </tr>
 
       <tr>
         <td style="border-bottom:1px"><span class="col-md-3">Availabilty</span>
-        <span span class="col-md-5 text-primary">{{$ctrl.booking.availability.date | date:'shortDate'}} from {{$ctrl.booking.availabilty.earliestTime | date:'h:mm a' }} to {{$ctrl.booking.availabilty.latestTime | date:'h:mm a'}}</span>
+        <span span class="col-md-5 text-primary">On {{$ctrl.booking.availability.earliestDate | date:'shortDate'}} from {{$ctrl.booking.availabilty.earliestTime | date:'h:mm a' }} to {{$ctrl.booking.availabilty.latestTime | date:'h:mm a'}}</span>
         </td> 
       </tr>
     </tbody>
@@ -43,7 +43,7 @@
     </div>
     <div class="modal-footer">
         <button class="btn btn-warning" ng-click="$ctrl.goBack()">Back</button>
-        <button ng-click="$ctrl.submitBooking" class="btn btn-primary">Submit</button>
+        <button ng-click="$ctrl.submitBooking()" class="btn btn-primary">Submit</button>
   </div>
   </div>
   

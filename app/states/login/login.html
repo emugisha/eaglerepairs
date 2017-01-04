@@ -2,37 +2,38 @@
 
 <h2 class="text-center">Administrator Login</h2>
 <br/>
-<form class="form-horizontal col-md-offset-2" ng-submit="contactInfoForm.$valid && $ctrl.addUserInfo()" name="contactInfoForm" novalidate>
+<p style="color:red" class="text-center" ng-if="login.showError">{{login.showError}}</p>
+<form class="form-horizontal col-md-offset-2" ng-submit="loginForm.$valid && login.signIn()" name="loginForm" novalidate>
     <div class="form-group">
-    <label for="firstName" class="control-label col-sm-2">Username</label>
+    <label for="username" class="control-label col-sm-2">Email</label>
     <div class="col-sm-4">
       <input type="text" class="form-control"
-                          name="firstName"
-                          ng-model="$ctrl.booking.client.firstName" 
-                          placeholder="Enter Username"
+                          name="username"
+                          ng-model="login.user.email" 
+                          placeholder="Enter the Email"
                           required>
-      <div class="form-error" ng-messages="contactInfoForm.firstName.$error" ng-if="contactInfoForm.firstName.$dirty || contactInfoForm.$submitted">
-        <div ng-message="required">Username is required</div>
+      <div class="form-error" ng-messages="loginForm.username.$error" ng-if="loginForm.username.$dirty || loginForm.$submitted">
+        <div ng-message="required">The Email is required</div>
       </div>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="lastName" class="col-sm-2 control-label">Password</label>
+    <label for="pswd" class="col-sm-2 control-label">Password</label>
     <div class="col-sm-4">
-      <input type="text"  class="form-control" 
-                          name="lastName"
-                          ng-model="$ctrl.booking.client.lastName" 
-                          placeholder="Enter Password"
+      <input type="password"  class="form-control" 
+                          name="pswd"
+                          ng-model="login.user.password" 
+                          placeholder="Enter Your Password"
                           required>
-      <div class="form-error" ng-messages="contactInfoForm.lastName.$error" ng-if="contactInfoForm.lastName.$dirty || contactInfoForm.$submitted">
+      <div class="form-error" ng-messages="loginForm.password.$error" ng-if="loginForm.password.$dirty || loginForm.$submitted">
         <div ng-message="required">Password is required</div>
       </div>
     </div>
   </div>
 
   <div class="col-sm-4 col-md-offset-2">
-         <button type="submit" class="btn btn-primary">Login</button>
+         <button type="submit" class="btn btn-primary" ng-disabled="!loginForm.$valid">Sign In</button>
   </div>
 
 </form>

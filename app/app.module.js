@@ -23,7 +23,8 @@
                 'mgcrea.ngStrap',
                 'ngSanitize',
                 'hm.readmore',
-                'ngAnimate'
+                'ngAnimate',
+                 'firebase'
         ]);
 
 }());

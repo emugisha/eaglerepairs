@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
+    
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
@@ -156,6 +157,7 @@
        ga('send', 'pageview');
     </script>
 
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -170,6 +172,8 @@
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-read-more/dist/readmore.min.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -188,11 +192,12 @@
          <script src="components/ng-components/booking/review.component.js"></script>
          <script src="components/ng-components/appliances/appliances.component.js"></script> 
          <script src="components/ng-components/appliances/brands.component.js"></script> 
+         <script  src="components/Services/booking.service.js"></script>
+         <script  src="components/Services/auth.service.js"></script>
+         <script  src="components/Services/firebase.service.js"></script>
         <!-- endbuild -->
 </body>
-</html>
-
-
+<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
 <script type="text/javascript" src="states/contact/contact.config.js"></script>
 <script type="text/javascript" src="states/contact/contact.controller.js"></script>
 <script type="text/javascript" src="states/contact/contact.controller.spec.js"></script>
@@ -200,4 +205,17 @@
 <script type="text/javascript" src="states/login/login.config.js"></script>
 <script type="text/javascript" src="states/login/login.controller.js"></script>
 <script type="text/javascript" src="states/login/login.controller.spec.js"></script>
+<script>
+  var config = {
+    apiKey: "AIzaSyBK9oL2UefOrdYpcxqJQDnfBRWTILJQgNA",
+    authDomain: "eaglestarrepairs.firebaseapp.com",
+    databaseURL: "https://eaglestarrepairs.firebaseio.com",
+    storageBucket: "eaglestarrepairs.appspot.com",
+    messagingSenderId: "743157018706"
+  };
+  firebase.initializeApp(config);
+</script>
+</html>
+
+
 

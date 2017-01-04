@@ -19,6 +19,7 @@
             vm.addAvailabilityInfo = addAvailabilityInfo;
             vm.fromDate = new Date(); 
             vm.goBack = goBack;
+            
             function addAvailabilityInfo(){
                 vm.onDone({booking: vm.booking});
             }

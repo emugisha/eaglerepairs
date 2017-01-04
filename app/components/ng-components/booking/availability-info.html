@@ -6,21 +6,21 @@
     <div class="form-group">
     <label for="firstName" class="control-label col-sm-2"><i class="fa fa-calendar"></i>Date</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" data-autoclose="true" data-min-date="{{$ctrl.availaibilityDate}}"  ng-model="$ctrl.booking.availability.date" bs-datepicker><!--data-autoclose="true"  -->
+      <input type="text" class="form-control" data-autoclose="true" data-min-date="{{$ctrl.fromDate}}" data-date-type="number" ng-model="$ctrl.booking.availability.earliestDate" bs-datepicker><!--data-autoclose="true"  -->
     </div>
   </div>
 
    <div class="form-group">
     <label for="firstName" class="control-label col-sm-2"><i class="fa fa-clock-o"></i>From</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" ng-model="$ctrl.booking.availabilty.earliestTime" data-time-type="number" name="from" bs-timepicker>
+      <input type="text" class="form-control" ng-model="$ctrl.booking.availability.earliestTime" data-time-type="number" name="from" bs-timepicker>
     </div>
   </div>
 
   <div class="form-group">
     <label for="firstName" class="control-label col-sm-2"><i class="fa fa-clock-o"></i>To</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" ng-model="$ctrl.booking.availabilty.latestTime" data-time-type="number" name="to" bs-timepicker>
+      <input type="text" class="form-control" ng-model="$ctrl.booking.availability.latestTime" data-time-type="number" name="to" bs-timepicker>
     </div>
   </div>
 

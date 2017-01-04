@@ -8,7 +8,7 @@
     <div class="col-sm-5">
       <input type="text" class="form-control"
                           name="firstName"
-                          ng-model="$ctrl.booking.client.firstName" 
+                          ng-model="$ctrl.booking.clientDetails.firstName" 
                           placeholder="Enter First Name"
                           ng-maxlength="30"
                           required>
@@ -24,7 +24,7 @@
     <div class="col-sm-5">
       <input type="text"  class="form-control" 
                           name="lastName"
-                          ng-model="$ctrl.booking.client.lastName" 
+                          ng-model="$ctrl.booking.clientDetails.lastName" 
                           placeholder="Enter Last Name"
                           ng-maxlength="30"
                           required>
@@ -40,7 +40,7 @@
     <div class="col-sm-5">
       <input type="text" class="form-control"
                         name="phone"  
-                        ng-model="$ctrl.booking.client.phone"
+                        ng-model="$ctrl.booking.clientDetails.phone"
                         min-length="10"
                         required 
                         placeholder="xxx-xxx-xxxx">
@@ -53,7 +53,7 @@
   <div class="form-group">
     <label for="city" class="col-sm-2 control-label">City</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" ng-model="$ctrl.booking.client.city"  placeholder="Enter City" name="city" required>
+      <input type="text" class="form-control" ng-model="$ctrl.booking.clientDetails.city"  placeholder="Enter City" name="city" required>
       <div class="form-error" ng-messages="contactInfoForm.city.$error" ng-if="contactInfoForm.city.$dirty || contactInfoForm.$submitted">
         <div ng-message="required">The City is required</div>
       </div>
@@ -62,7 +62,7 @@
   <div class="form-group">
     <label for="zip" class="col-sm-2 control-label">Zip Code</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control"  ng-model="$ctrl.booking.client.zipcode" name="zipCode" placeholder="xxxxx" required>
+      <input type="text" class="form-control"  ng-model="$ctrl.booking.clientDetails.zipcode" name="zipCode" placeholder="xxxxx" required>
       <div class="form-error" ng-messages="contactInfoForm.zipCode.$error" ng-if="contactInfoForm.zipCode.$dirty || contactInfoForm.$submitted">
         <div ng-message="required">The zip code is required</div>
     </div>
