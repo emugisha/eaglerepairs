@@ -14,7 +14,8 @@
     vm.showError=null;
     vm.user ={};
     vm.signIn = signIn;
-    vm.adminPanelUrl = "http://localhost:4200"
+    vm.adminPanelUrl = "http://localhost:4200";
+    //vm.adminPanelUrl = "https://eaglestaradmin.firebaseapp.com/";
 
    function signIn(){
      AuthService.login(vm.user).then(function(currentUser){
