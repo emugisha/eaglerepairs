@@ -7,7 +7,6 @@ $inactive-text: #727272;
 $inactive-border: #b6b6b6;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "components-font-awesome/scss/font-awesome.scss";
 // endbower
 
 
@@ -204,7 +203,7 @@ footer .copy-right {
 form.ng-submitted, form.ng-dirty .ng-invalid {
   border-color: $brand-danger;
   border-width: 1px;
-} 
+}
 
 //For the ng-strap time picker and date picker
 .datepicker.dropdown-menu {
@@ -303,5 +302,25 @@ form.ng-submitted, form.ng-dirty .ng-invalid {
 
 #contact .contact-text a {
     color: #777;
+}
+
+#under h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #efbb20;
+  margin-top: 0;
+  font-family: Open Sans, sans-serif;
+}
+
+#under .under {
+  margin-top: 130px;
+}
+
+#under p {
+  color: #1c3254;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: Open Sans, sans-serif;
 }
 

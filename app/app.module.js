@@ -20,6 +20,7 @@
                 'eagleRepairsApp.states.contact',
                 'eagleRepairsApp.components.booking',
                 'eagleRepairsApp.states.login',
+                'eagleRepairsApp.states.used',
                 'mgcrea.ngStrap',
                 'ngSanitize',
                 'hm.readmore',

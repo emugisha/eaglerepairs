@@ -1,13 +1,14 @@
 //----Jumbotron---
 
 .jumbotron {
-background: #000 url("https://assets.searshomeservices.com/images/hero/HeroV3ReparT1.jpg") no-repeat center center;
+//background: #000 url("https://assets.searshomeservices.com/images/hero/HeroV3ReparT1.jpg") no-repeat center center;
+  background: #000 url("../images/ap5.jpg") no-repeat center center;
 background-size: 100% 100%;
 -moz-background-size: 100% 100%;
 -webkit-background-size: 100% 100%;
 -o-background-size: 100% 100%;
  border-top:10px;
- border-top-color:#1c3254; 
+ border-top-color:#1c3254;
  margin-bottom: 0px;
 
 //color: $yellow; // change text color
@@ -127,7 +128,7 @@ background-size: 100% 100%;
     border-top: none;
     background-color: #fff;
 }
-.brands-main-heading h2,
+.brands-main-heading h2
 {
     font-size: 28px;
     margin-bottom: 25px;
@@ -138,4 +139,4 @@ background-size: 100% 100%;
 }
 .brands{
   padding-top: 0px;
-}  
+}

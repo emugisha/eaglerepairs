@@ -397,6 +397,7 @@ section#top-bar{
     margin: 0 -1px;
     padding: 1px 9px;
     width: auto;
+    color: #efbb20;
 }
 
 #topbar ul.login-top li:hover a {
@@ -636,3 +637,8 @@ section#header-upper {
     background-color: #fff;
     color: #EFBB20;
 }
+
+.navbar-toggle .icon-bar + .icon-bar {
+  background-color:#34404e;
+}
+

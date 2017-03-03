@@ -5,7 +5,7 @@
                 <div class="col-sm-12 service-base space">
                     <div class="col-sm-6 service-block">
                         <div class="service-inner">
-                            <img src="images/about1.png" alt="About">
+                            <img src="../images/ap4.jpg" alt="About">
                             <div class="service-text">
                                 <h4>ABOUT OUR COMPANY</h4>
                                 <p>At EagleStar Repairs we strive to build a lasting relationship through quality customer service. All of our technician's are industry trained professionals and are experienced working on all major makes and models of home appliances.</p>
@@ -14,7 +14,7 @@
                     </div>
                     <div class="col-sm-6 service-block">
                         <div class="service-inner">
-                            <img src="images/about1.png" alt="About">
+                            <img src="../images/ap2.jpg" alt="About">
                             <div class="service-text">
                                 <h4>ABOUT OUR WORK</h4>
                                 <p>Our technicians are trained to repair all the the major brands. Over the past years we have come across every major brand of appliance and we have not had an issue we could not resolve. Click below to see a few of the major brands we repair.</p>
@@ -32,25 +32,25 @@
             <div class="row">
                 <div class="col-sm-12 about-base space">
                     <div class="col-sm-12 col-md-4 about-block">
-                        <img src="images/about2.jpg" alt="About">
+                        <img src="../images/ap3.jpg" alt="About">
                         <h5>ABOUT OUR EXPERIENCE</h5>
                         <p>With more than 20 years of experience in working on a wide range of appliances, we have groomed our processes when it comes to identfying and solving appliance issues.</p>
                     </div>
                     <div class="col-sm-6 col-md-4 about-block">
                         <div class="about-item col-sm-12 col-xs-12 no-padding">
                             <div class="col-sm-3 col-xs-4 about-icon no-padding">
-                              
+
                                 <span class="fa-stack fa-3x">
                                 <i class="fa fa-square fa-stack-2x icon-color-1"></i>
                                 <i class="fa fa-briefcase fa-stack-1x icon-color-3"></i>
                                 </span>
                             </div>
                             <div class="about-text col-sm-9 col-xs-8 no-padding">
-                                <h6>BRILLIANT IDEAS</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Integer adipiscing erat eg</p>
+                                <h6>PROFESSIONALISM</h6>
+                                <p>Our friendly, respectful professionals will arrive on time.</p>
                             </div>
                         </div>
-                        
+
                         <div class="about-item col-sm-12 col-xs-12 no-padding">
                             <div class="col-sm-3 col-xs-4 about-icon no-padding">
                                 <span class="fa-stack fa-3x">
@@ -59,8 +59,8 @@
                                 </span>
                             </div>
                             <div class="about-text col-sm-9 col-xs-8 no-padding">
-                                <h6>PROFESSIONAL SPECIALISTS</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Integer adipiscing erat eg</p>
+                                <h6>HONESTY</h6>
+                                <p>Our honest and upfront pricing is the best in the area.  </p>
                             </div>
                         </div>
                         <div class="about-item col-sm-12 col-xs-12 no-padding">
@@ -71,8 +71,8 @@
                                 </span>
                             </div>
                             <div class="about-text col-sm-9 col-xs-8 no-padding">
-                                <h6>PLANNING</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Integer adipiscing erat eg</p>
+                                <h6>FELXIBILITY</h6>
+                                <p>Flexible appointment times that fit your schedule.</p>
                             </div>
                         </div>
                     </div>
@@ -85,8 +85,8 @@
                                 </span>
                             </div>
                             <div class="about-text col-sm-9 col-xs-8 no-padding">
-                                <h6>REVOLUTION</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Integer adipiscing erat eg</p>
+                                <h6>GUARANTEE</h6>
+                                <p>All work and labor are guaranteed.</p>
                             </div>
                         </div>
                         <div class="about-item col-sm-12 col-xs-12 no-padding">
@@ -97,8 +97,8 @@
                                 </span>
                             </div>
                             <div class="about-text col-sm-9 col-xs-8 no-padding">
-                                <h6>WORLD WIDE BRANCH</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Integer adipiscing erat eg</p>
+                                <h6>SOLUTIONS</h6>
+                                <p>If you have an appliance problem, we have a solution</p>
                             </div>
                         </div>
                         <div class="about-item col-sm-12 col-xs-12 no-padding">
@@ -109,13 +109,29 @@
                                 </span>
                             </div>
                             <div class="about-text col-sm-9 col-xs-8 no-padding">
-                                <h6>SAFE WORK</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit. Integer adipiscing erat eg</p>
+                                <h6>SAVINGS</h6>
+                                <p>We offer regular special offers for savings on any repairs</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          <div class="row">
+            <div class="col-md-12 booking-area text-center" >
+              <h5>TOP APPLIANCES THAT WE REPAIR</h5>
+              <hr>
+              <div class="row">
+                <div class="col-md-4" ng-repeat="group in about.groupedAppliances">
+                  <ul>
+                    <li ng-repeat="appliance in group" style="text-align:left; font-size:15px;"><a href="" ng-click="$ctrl.returnAppliance(appliance)">{{appliance}}</a></li>
+                  </ul>
+
+                </div>
+
+              </div>
+
+            </div>
+          </div>
         </div>
     </section>
     <!-- end About us -->

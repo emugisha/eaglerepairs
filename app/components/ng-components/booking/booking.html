@@ -14,14 +14,14 @@
     </div>
 </div>
 <br>
-<div class="row">  
+<div class="row">
     <appliance-info ng-show="$ctrl.step===1" booking="$ctrl.booking" on-done="$ctrl.gotoStep2(booking)" on-close="$ctrl.closeModal()"></appliance-info>
 
     <user-info ng-show="$ctrl.step===2" booking="$ctrl.booking" on-done="$ctrl.gotoStep3(booking)" on-back="$ctrl.gotoStep1(booking)"></user-info>
 
     <availability-info ng-show="$ctrl.step===3" booking="$ctrl.booking" on-done="$ctrl.gotoStep4(booking)" on-back="$ctrl.gotoStep2(booking)"></availability-info>
-    
-    <review ng-show="$ctrl.step===4" booking="$ctrl.booking" on-back="$ctrl.gotoStep3(booking)"></review>
+
+    <review ng-show="$ctrl.step===4" booking="$ctrl.booking" on-back="$ctrl.gotoStep3(booking)" on-done="$ctrl.closeModal()"></review>
     <!-- Will be added later
     <div class="col-md-4">
         <h4> Check our used Appliance inventory</h4>

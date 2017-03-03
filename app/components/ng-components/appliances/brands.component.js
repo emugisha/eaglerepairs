@@ -12,11 +12,10 @@
             }
         });
 
-        function brandsController(){
+        function brandsController(ApplianceService){
             var vm = this;
             vm.addBrand = addBrand;
-            vm.allBrands = ['Admiral','Amana','Coldspot','Estate','Frigidaire','GE','GE Profile','Gibson','Hotpoint','Kenmore',
-                            'Kenmore Elite','KitchenAid','LG','Maytag','Roper','Samsung','Westinghouse','Whirlpool'];
+            vm.allBrands = ApplianceService.getAllBrands();
             vm.groupedBrands = _.chunk(vm.allBrands, Math.floor(vm.allBrands.length/3));
 
           function addBrand(brandName){
@@ -24,4 +23,4 @@
           }
         }
 
-}())
+}());

@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/{,states/*/,components/*/*/}*.js'],
+        files: ['<%= yeoman.app %>/{,states/*/,components/*/{,*/}*}*.js'],
         tasks: ['newer:jshint:all', 'newer:jscs:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -224,7 +224,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -414,7 +414,7 @@ module.exports = function (grunt) {
             '*.html',
             'states/*/*.html',
             'components/*/*/*.html',
-            'images/{,*/}*.{webp}',
+            'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
