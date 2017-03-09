@@ -4,4 +4,4 @@
     angular
         .module('eagleRepairsApp.components.booking', []);
 
-})();
+}());

@@ -8,7 +8,7 @@ $inactive-border: #b6b6b6;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-
+@import "components-font-awesome/scss/font-awesome.scss";
 
 @import "../app/styles/topnav.scss";
 @import "../app/states/home/home.scss";
