@@ -16,6 +16,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+
+    
   </head>
   <body ng-app="eagleRepairsApp">
     <!--[if lte IE 8]>
@@ -70,7 +73,7 @@
                     <ul class="nav navbar-nav">
                         <li><a ng-href="#/home" class="active">Home</a></li>
                         <li><a ng-href="#/about">About Us</a></li>
-                        <li><a href="#">Shop Used Appliances</a></li>
+                        <li><a ng-href="#/used">Shop Used Appliances</a></li>
                         <li><a href="#/contact">Contact</a> </li>
                     </ul>
                 </div>
@@ -139,7 +142,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 no-padding copy-right text-center">
-                <p> Copyright © 2016 Eagel Star Repair Services. All Rights Reserved. Designed By Eric Mugisha</p>
+                <p> Copyright © 2016 Eagle Star Repair Services. All Rights Reserved. Designed By Eric Mugisha</p>
             </div>
         </div>
     </div>
@@ -184,6 +187,14 @@
          <script src="states/home/home.controller.js"></script>
          <script src="states/about/about.config.js"></script>
         <script  src="states/about/about.controller.js"></script>
+        <!-- added by patrck -->
+         <script   src="states/used/used.config.js"></script>
+         <script   src="states/used/used.controller.js"></script>
+         <script   src="states/shoppingCart/shoppingCart.config.js"></script>
+         <script   src="states/shoppingCart/shoppingCart.controller.js"></script>
+         <script   src="states/applianceDetails/details.config.js"></script>
+         <script   src="states/applianceDetails/details.controller.js"></script>
+         <!-- patrick  -->
          <script src="components/ng-components/booking/booking.module.js"></script>
          <script src="components/ng-components/booking/booking.component.js"></script>
          <script src="components/ng-components/booking/user-info.component.js"></script>
@@ -195,6 +206,8 @@
          <script  src="components/Services/booking.service.js"></script>
          <script  src="components/Services/auth.service.js"></script>
          <script  src="components/Services/firebase.service.js"></script>
+         <script  src="components/services/used.service.js"></script>
+         <script  src="components/services/cart.service.js"></script>
         <!-- endbuild -->
 </body>
 <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>

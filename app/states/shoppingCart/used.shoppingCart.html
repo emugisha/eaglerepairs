@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="alert alert-warning" ng-show="cart.listItems.length === 0 ">
+        <h3>Your cart is empty</h3>
+        <button type="button" class="btn btn-primary" ui-sref="used" >Back to store</button>
+    </div>
+    <div class="table-responsive col-lg-12" ng-show="cart.listItems.length > 0">
+        <table class="table" >
+            <caption><h3>Your cart</h3></caption>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tr ng-repeat="appliance in cart.listItems">
+                <td><img ng-src="{{appliance.imageUrl}}"   width="100" height="100"  alt="{{appliance.brand}}"</td>
+                <td>{{appliance.type}}</td>
+                <td>{{appliance.details}}</td>
+                <td>{{appliance.price | currency}}</td>
+                <td><button type="button" class="btn btn-danger pull-right" ng-click="cart.removeFromCart(appliance);cart.addBack(appliance)">REMOVE</button></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <th>Total</th>
+                <th>{{cart.getTotalPrice(appliance) | currency }}</th>
+                <td></td>
+            </tr>
+        </table>
+        <div>
+            <button type="button" class="btn btn-primary" ui-sref="used" >Continue shopping</button>
+            <button type="button" class="btn btn-danger">Checkout</button>
+        </div>
+    </div>
+    
+</div>

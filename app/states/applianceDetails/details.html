@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="table-responsive col-lg-8">
+        <table class="table" >
+            <thead>
+                <th></th>
+                <th></th>
+            </thead>
+            <tr>
+                    <td rowspan="3"><img ng-src="{{details.fullDetails.imageUrl}}"   width="300" height="300"  alt="{{appliance.brand}}"></td>
+                    <th>{{details.fullDetails.type}}</th>
+                    
+            </tr>
+            
+            <tr>
+                <td>
+                    <div>
+                        <h4>Key features</h4>
+                        <p>{{details.fullDetails.features}}</p>
+                    </div>
+                    <div>
+                        <h4>Description</h4>
+                        <p>{{details.fullDetails.details}}</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -18,8 +18,12 @@
                 'eagleRepairsApp.states.home',
                 'eagleRepairsApp.states.about',
                 'eagleRepairsApp.states.contact',
+                'eagleRepairsApp.states.used',
+                'eagleRepairsApp.states.used.shopCart',
+                'eagleRepairsApp.states.used.details',
                 'eagleRepairsApp.components.booking',
                 'eagleRepairsApp.states.login',
+                
                 'mgcrea.ngStrap',
                 'ngSanitize',
                 'hm.readmore',
