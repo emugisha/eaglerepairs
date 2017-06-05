@@ -9,9 +9,13 @@
     .controller('AboutController', aboutController);
 
    /* @ngInject */
-  function aboutController() {
+  function aboutController(ApplianceService) {
 
     var vm = this;
+    vm.allAppliances= ApplianceService.getAllAppliances();
 
+    vm.chunks= Math.floor(vm.allAppliances.length/3);
+    vm.groupedAppliances = _.chunk(vm.allAppliances, vm.chunks);
+  console.log(vm.groupedAppliances);
   }
 }());

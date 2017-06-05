@@ -11,18 +11,11 @@
    /* @ngInject */
   function LoginController(AuthService,$window) {
     var vm = this;
-    vm.showError=null;
-    vm.user ={};
-    vm.signIn = signIn;
-    vm.adminPanelUrl = "http://localhost:4200";
-    //vm.adminPanelUrl = "https://eaglestaradmin.firebaseapp.com/";
+    vm.gotoAdminPage = gotoAdminPage;
+    vm.adminPanelUrl = "https://eaglestaradmin.firebaseapp.com/";
 
-   function signIn(){
-     AuthService.login(vm.user).then(function(currentUser){
-        window.location.href = vm.adminPanelUrl;
-     }).catch(function (error){
-       vm.showError = "Invalid username or Password";
-     });
+   function gotoAdminPage(){
+     $window.location.href = vm.adminPanelUrl;
     }
 
   }

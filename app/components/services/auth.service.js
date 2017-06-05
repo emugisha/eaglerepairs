@@ -7,7 +7,8 @@
 
         function authService(FirebaseService){
             var service ={
-               login:login
+               login:login,
+                loginAnonymously:loginAnonymously
             }
             return service
 
@@ -15,7 +16,12 @@
               var auth = FirebaseService.firebaseAuth();
              return auth.signInWithEmailAndPassword(user.email,user.password);
           }
-        }
-        
 
-}())
+          function loginAnonymously() {
+            var auth = FirebaseService.firebaseAuth();
+            return auth.signInAnonymously()
+          }
+        }
+
+
+}());

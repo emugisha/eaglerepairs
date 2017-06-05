@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
-    
+
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.css" />
@@ -16,9 +16,13 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+<<<<<<< HEAD
 
 
     
+=======
+    <script src="https://maps.googleapis.com/maps/api/js" ></script>
+>>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1
   </head>
   <body ng-app="eagleRepairsApp">
     <!--[if lte IE 8]>
@@ -45,8 +49,8 @@
                 <!--Top Bar block-->
                 <div class="col-sm-4 col-md-4 col-md-offset-2 topbar-block text-right ">
                     <ul class="login-top">
-                        <li><a href="#/login"><i class="fa fa-user"></i> Login</a> </li>
-                        <li><a href="#"><i class="fa fa-clock-o"></i> Booking Status </a></li>
+                        <li><a href="#/login"><i class="fa fa-user icon-topnav"></i> Login</a> </li>
+                        <li><a href="#/contact"><i class="fa fa-clock-o"></i> Booking Status </a></li>
                     </ul>
                 </div>
             </div>
@@ -60,21 +64,26 @@
             <div class="row">
                 <!--Brand and toggle get grouped for better mobile display-->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle">
+                    <button type="button" class="navbar-toggle" data-toggle = "collapse" data-target = "#menu_nav">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
                     </button>
                     <a href="index.html"><img src="images/logo-2.png" alt="Site logo"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse" id="menu_nav">
+                <div class="collapse navbar-collapse" id="menu_nav">
                     <ul class="nav navbar-nav">
                         <li><a ng-href="#/home" class="active">Home</a></li>
                         <li><a ng-href="#/about">About Us</a></li>
                         <li><a ng-href="#/used">Shop Used Appliances</a></li>
+<<<<<<< HEAD
                         <li><a href="#/contact">Contact</a> </li>
+=======
+                        <li><a ng-href="#/contact">Contact Us</a> </li>
+>>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1
                     </ul>
                 </div>
              </div>
@@ -110,18 +119,17 @@
                     <h4>Our Services</h4>
                     <ul class="news">
                         <li>
-                            <a href="#">Appliance Repair </a>
+                            <a ng-href="#/about">Appliance Repair </a>
                         </li>
                         <li>
-                            <a href="#">Used Appliance</a>
+                            <a href="#/used">Used Appliance</a>
                         </li>
                         <li>
-                            <a href="#">COMMERCIAL SERVICES</a>
-                    
+                            <a href="#/contact">Commercial Services</a>
                         </li>
                     </ul>
                 </div>
-        
+
                 <div class="footer-block col-sm-6 col-md-4">
                     <h4>Get In Touch</h4>
                     <ul class="office-hour">
@@ -183,10 +191,23 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
          <script src="app.module.js"></script>
          <script src="app.config.js"></script>
-         <script src="states/home/home.config.js"></script>
-         <script src="states/home/home.controller.js"></script>
-         <script src="states/about/about.config.js"></script>
+        <script  src="components/services/booking.service.js"></script>
+        <script  src="components/services/auth.service.js"></script>
+        <script  src="components/services/firebase.service.js"></script>
+        <script  src="components/services/appliance.service.js"></script>
+        <script src="components/ng-components/booking/booking.module.js"></script>
+        <script src="components/ng-components/booking/booking.component.js"></script>
+        <script src="components/ng-components/booking/user-info.component.js"></script>
+        <script src="components/ng-components/booking/availability-info.component.js"></script>
+        <script src="components/ng-components/booking/appliance-info.component.js"></script>
+        <script src="components/ng-components/booking/review.component.js"></script>
+        <script src="components/ng-components/appliances/appliances.component.js"></script>
+        <script src="components/ng-components/appliances/brands.component.js"></script>
+        <script src="states/home/home.config.js"></script>
+        <script src="states/home/home.controller.js"></script>
+        <script src="states/about/about.config.js"></script>
         <script  src="states/about/about.controller.js"></script>
+<<<<<<< HEAD
         <!-- added by patrck -->
          <script   src="states/used/used.config.js"></script>
          <script   src="states/used/used.controller.js"></script>
@@ -208,16 +229,18 @@
          <script  src="components/Services/firebase.service.js"></script>
          <script  src="components/services/used.service.js"></script>
          <script  src="components/services/cart.service.js"></script>
+=======
+        <script  src="states/contact/contact.config.js"></script>
+        <script  src="states/contact/contact.controller.js"></script>
+        <script  src="states/login/login.config.js"></script>
+        <script  src="states/login/login.controller.js"></script>
+        <script  src="states/used/used.config.js"></script>
+        <script  src="states/used/used.controller.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+>>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1
         <!-- endbuild -->
 </body>
-<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
-<script type="text/javascript" src="states/contact/contact.config.js"></script>
-<script type="text/javascript" src="states/contact/contact.controller.js"></script>
-<script type="text/javascript" src="states/contact/contact.controller.spec.js"></script>
 
-<script type="text/javascript" src="states/login/login.config.js"></script>
-<script type="text/javascript" src="states/login/login.controller.js"></script>
-<script type="text/javascript" src="states/login/login.controller.spec.js"></script>
 <script>
   var config = {
     apiKey: "AIzaSyBK9oL2UefOrdYpcxqJQDnfBRWTILJQgNA",
