@@ -1,58 +1,41 @@
-<<<<<<< HEAD
 <nav class="navbar navbar-default ">
 	<div class="container">
-
-<form  class="col-xs-8" style="margin-top: 2px">
-  		<div class="input-group input-group-lg">
-        	<input  ng-model="$ctrl.query"  class="form-control" placeholder="Search"/>
-			<div class="input-group-btn">
-      			<button class="btn btn-default" type="submit">
+		<form  class="col-xs-8" style="margin-top: 2px">
+  			<div class="input-group input-group-lg">
+        		<input  ng-model="$ctrl.query"  class="form-control" placeholder="Search"/>
+				<div class="input-group-btn">
+      				<button class="btn btn-default" type="submit">
        				<i class="glyphicon glyphicon-search"></i>
-      			</button>
-    		</div>
-  		</div>
-	</form>
-
+      				</button>
+    			</div>
+  			</div>
+		</form>
 		<div >
 			<ul class="nav navbar-nav navbar-right">
         		<li><a ng-href="#/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       		</ul>
     	</div>
   	</div>
-</nav>
-
-
-
-
-	
+</nav>	
 <div  id="wrapper" class="container">
 	<section class="main-content">
-
-	<div class="row">
-		<div class="col-sm-4" ng-repeat="appliance in used.allAppliances() | filter:$ctrl.query | orderBy:used.orderProp ">	
-			<ul class="thumbnails listing-products">
-				<li class="span3">
-					<div class="product-box">
-						<span class="sale_tag"></span>												
-							<img ng-click="used.gotoDetails(appliance)" ng-src="{{appliance.imageUrl}}"   width="200" height="200"  alt="{{appliance.brand}}" ng-click="used.gotoDetails(appliance)" /><br/>
-							<p class="price">{{appliance.price | currency}}</p>
-							<a ng-click="used.gotoDetails(appliance)"><h5><u>{{appliance.type}}</u></h5></a>
-							
-							<p><button type="button" class="btn btn-primary"   ng-click="used.addToList(appliance);used.removeFromUsed(appliance)" >Add to Cart</button></p>
-					</div>
-				</li>
-			</ul>
-	</div>	
-</div>
+		<div class="row">
+			<div class="col-sm-4" ng-repeat="appliance in used.allAppliances | filter:$ctrl.query  | orderBy:used.orderProp track by $index">	
+				<div class="row">
+					<ul class="thumbnails listing-products">
+						<li class="span3">
+							<div class="product-box">
+								<span class="sale_tag"></span>												
+								<img ng-click="used.gotoDetails(appliance)" ng-src="{{appliance.imageUrl}}"   width="200" height="200"  alt="{{appliance.brand}}" ng-click="used.gotoDetails(appliance)" /><br/>
+								<p class="price">{{appliance.price | currency}}</p>
+								<a ng-click="used.gotoDetails(appliance)"><h5><u>{{appliance.type}}</u></h5></a>
+								<p style="color:red" ng-if="!used.allAppliances[$index].available">Currently Unavailable</p>
+								<p><button type="button" class="btn btn-primary"  ng-disabled="!used.allAppliances[$index].available" ng-click="used.addToList($index);used.removeFromUsed(appliance)">Add to Cart</button></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
 	</section>
 </div>
-
-=======
-<div class="row">
-
-  <div id="under" class="col-sm-4 col-md-offset-4" style="margin-top: 100px;margin-bottom: 200px">
-    <h1>UNDER CONSTRUCTION</h1>
-    <p>FOR INFORMATION ON OUR SELECTION OF USED APPLIANCES, PLEASE GIVE US A CALL ON <br><b> 1-301-220-2838</b></p>
-  </div>
-</div>
->>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1

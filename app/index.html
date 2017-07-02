@@ -16,13 +16,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-<<<<<<< HEAD
 
-
-    
-=======
     <script src="https://maps.googleapis.com/maps/api/js" ></script>
->>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1
+
   </head>
   <body ng-app="eagleRepairsApp">
     <!--[if lte IE 8]>
@@ -79,11 +75,8 @@
                         <li><a ng-href="#/home" class="active">Home</a></li>
                         <li><a ng-href="#/about">About Us</a></li>
                         <li><a ng-href="#/used">Shop Used Appliances</a></li>
-<<<<<<< HEAD
-                        <li><a href="#/contact">Contact</a> </li>
-=======
                         <li><a ng-href="#/contact">Contact Us</a> </li>
->>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1
+
                     </ul>
                 </div>
              </div>
@@ -169,6 +162,9 @@
     </script>
 
 
+    <!-- firebase --> 
+
+
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -207,7 +203,7 @@
         <script src="states/home/home.controller.js"></script>
         <script src="states/about/about.config.js"></script>
         <script  src="states/about/about.controller.js"></script>
-<<<<<<< HEAD
+
         <!-- added by patrck -->
          <script   src="states/used/used.config.js"></script>
          <script   src="states/used/used.controller.js"></script>
@@ -215,6 +211,8 @@
          <script   src="states/shoppingCart/shoppingCart.controller.js"></script>
          <script   src="states/applianceDetails/details.config.js"></script>
          <script   src="states/applianceDetails/details.controller.js"></script>
+          <script   src="states/checkout/checkout.config.js"></script>
+          <script   src="states/checkout/checkout.controller.js"></script>
          <!-- patrick  -->
          <script src="components/ng-components/booking/booking.module.js"></script>
          <script src="components/ng-components/booking/booking.component.js"></script>
@@ -229,18 +227,16 @@
          <script  src="components/Services/firebase.service.js"></script>
          <script  src="components/services/used.service.js"></script>
          <script  src="components/services/cart.service.js"></script>
-=======
         <script  src="states/contact/contact.config.js"></script>
         <script  src="states/contact/contact.controller.js"></script>
         <script  src="states/login/login.config.js"></script>
         <script  src="states/login/login.controller.js"></script>
-        <script  src="states/used/used.config.js"></script>
-        <script  src="states/used/used.controller.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
->>>>>>> f47c8ab69ddce0fec0b2741ed6f2b0ec7c22eda1
+        <!-- <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script> -->
+        <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+
         <!-- endbuild -->
 </body>
-
+<!--
 <script>
   var config = {
     apiKey: "AIzaSyBK9oL2UefOrdYpcxqJQDnfBRWTILJQgNA",
@@ -248,6 +244,19 @@
     databaseURL: "https://eaglestarrepairs.firebaseio.com",
     storageBucket: "eaglestarrepairs.appspot.com",
     messagingSenderId: "743157018706"
+  };
+  firebase.initializeApp(config);
+</script>
+-->
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6fxAWXYWtmHSNMeyueKatjC8j11EomSw",
+    authDomain: "eaglerepairs-364c3.firebaseapp.com",
+    databaseURL: "https://eaglerepairs-364c3.firebaseio.com",
+    projectId: "eaglerepairs-364c3",
+    storageBucket: "eaglerepairs-364c3.appspot.com",
+    messagingSenderId: "138711364180"
   };
   firebase.initializeApp(config);
 </script>

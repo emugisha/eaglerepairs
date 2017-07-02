@@ -19,12 +19,9 @@
   vm.removeFromCart=function(appliance){
     vm.list=CartService.updateCart(appliance);
   };
-
-
   //add back to used list
   vm.addBack=function(appliance){
-      vm.appliances=UsedService.add(appliance);
-      
+      vm.appliances=UsedService.add(appliance);  
     };
   // to calculate the total price
   vm.getTotalPrice=function(appliance){
@@ -35,11 +32,6 @@
     }
     return total;
   }
-
  }
-    
-    
-    
-
-  }
+}
 ());

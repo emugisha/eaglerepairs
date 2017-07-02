@@ -5,7 +5,8 @@
     .factory('CartService',CartService);
     function CartService(){
       var list=[];
-        
+      var newList=[];
+    
     return {
       addItem: addItem,
       getList: getList,
@@ -13,10 +14,8 @@
     }
 
       function addItem(item) {
-        console.log('Adding to list');
-      
-        list.push(item);  
-        console.log(list);
+        
+        list.push(item);      
       }
 
       function getList() {
@@ -25,8 +24,8 @@
       //update the cart after removing an item
       function updateCart(item){
         list.splice(list.indexOf(item),1);
-      
       }
+      
    
     
     }  
