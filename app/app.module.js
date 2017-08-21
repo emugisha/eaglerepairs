@@ -28,7 +28,8 @@
                 'ngSanitize',
                 'hm.readmore',
                 'ngAnimate',
-                 'firebase'
+                 'firebase',
+                  'ngStorage'
         ]);
 
 }());
