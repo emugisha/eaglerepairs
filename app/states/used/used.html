@@ -16,26 +16,26 @@
       		</ul>
     	</div>
   	</div>
-</nav>	
+</nav>
 <div  id="wrapper" class="container">
 	<section class="main-content">
 		<div class="row">
-			<div class="col-sm-4" ng-repeat="appliance in used.allAppliances | filter:$ctrl.query  | orderBy:used.orderProp track by $index">	
+			<div class="col-sm-4" ng-repeat="appliance in used.allAppliances | filter:$ctrl.query  | orderBy:used.orderProp track by $index">
 				<div class="row">
 					<ul class="thumbnails listing-products">
 						<li class="span3">
 							<div class="product-box">
-								<span class="sale_tag"></span>												
-								<img ng-click="used.gotoDetails(appliance)" ng-src="{{appliance.imageUrl}}"   width="200" height="200"  alt="{{appliance.brand}}" ng-click="used.gotoDetails(appliance)" /><br/>
+								<span class="sale_tag"></span>
+								<img ng-click="used.gotoDetails(appliance)" ng-src="{{appliance.imageUrls[0]}}"   width="200" height="200"  alt="{{appliance.brand}}" ng-click="used.gotoDetails(appliance)" /><br/>
 								<p class="price">{{appliance.price | currency}}</p>
-								<a ng-click="used.gotoDetails(appliance)"><h5><u>{{appliance.type}}</u></h5></a>
+								<a href="" ng-click="used.gotoDetails(appliance)"><h5>{{appliance.title}}</h5></a>
 								<p style="color:red" ng-if="!used.allAppliances[$index].available">Currently Unavailable</p>
-								<p><button type="button" class="btn btn-primary"  ng-disabled="!used.allAppliances[$index].available" ng-click="used.addToList($index);used.removeFromUsed(appliance)">Add to Cart</button></p>
+								<p><button type="button" class="btn btn-primary"  ng-disabled="!used.allAppliances[$index].available" ng-click="used.addToList($index)">Add to Cart</button></p>
 							</div>
 						</li>
 					</ul>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</section>
 </div>

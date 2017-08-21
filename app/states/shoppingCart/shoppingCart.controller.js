@@ -11,20 +11,26 @@
     .controller('ShopCartController', ShopCartController);
 
   /* @ngInject */
- function ShopCartController(UsedService,CartService){
+ function ShopCartController(UsedApplianceService,CartService){
    var vm = this;
    // Read the data from the CartService
   vm.listItems = CartService.getList();
+
   //update the cart after deleting an appliance
-  vm.removeFromCart=function(appliance){
-    vm.list=CartService.updateCart(appliance);
-  };
+   vm.removeFromCart = removeFromCart;
+   vm.addBack = addBack;
+   vm.getTotalPrice = getTotalPrice;
+
+
+  function removeFromCart(appliance){
+    CartService.updateCart(appliance);
+  }
   //add back to used list
-  vm.addBack=function(appliance){
-      vm.appliances=UsedService.add(appliance);  
-    };
+  function addBack(appliance){
+      UsedApplianceService.add(appliance);
+  }
   // to calculate the total price
-  vm.getTotalPrice=function(appliance){
+  function getTotalPrice(appliance){
     var total=0;
     for (var i = 0; i < vm.listItems.length; i++){
       var item=vm.listItems[i];
@@ -32,6 +38,7 @@
     }
     return total;
   }
+
  }
 }
 ());

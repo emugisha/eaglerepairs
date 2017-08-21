@@ -1,44 +1,53 @@
 (function(){
     'use strict';
+
     angular
     .module('eagleRepairsApp')
-    .factory('UsedService',UsedService);
-    function UsedService(FirebaseService){
+    .factory('UsedApplianceService',UsedApplianceService);
+
+
+    function UsedApplianceService(FirebaseService){
       var databaseRef = FirebaseService.firebaseDatabase();
       var appliances=[{}];
-      var selectedAppliance = {};
-      
-        return {
-          getAllAppliances:function() {
+      var selectedAppliance;
+
+      var service = {
+        getAllUsedAppliances:getAllUsedAppliances,
+        getAllOrdersRef:getAllOrdersRef,
+        removeAppliance:removeAppliance,
+        add:add,
+        getSelectedAppliance:getSelectedAppliance,
+        setSelectedAppliance:setSelectedAppliance
+      };
+      return service;
+
+      function getAllUsedAppliances() {
+        //TODO:Rename the database instance to used-appliances
           return databaseRef.ref().child('appliances');
-        },
-          getAllOrdersRef:function(){
+      }
+
+      function getAllOrdersRef(){
            return databaseRef.ref().child('orders');
-        },
+      }
+
       //to update the used list
-          remove:function(item){
+      function removeAppliance(item){
           appliances.splice(appliances.indexOf(item),1);
           return appliances;
-        },
+      }
       //to put the appliance back in the list of used appliances after it has been removed from the cart
-          add:function(item){
+      function add(item){
           appliances.push(item);
           return appliances;
-        },
+      }
 
-          getSelectedAppliance:function(){
+      function getSelectedAppliance(){
           return selectedAppliance;
 
-      },
-          setSelectedAppliance:function(appliance){
+      }
+      function setSelectedAppliance(appliance){
           selectedAppliance = appliance;
       }
     }
 
-      
-   
-  
-    }
-
-        
-    }());
+}());

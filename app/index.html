@@ -67,7 +67,7 @@
                         <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a href="index.html"><img src="images/logo-2.png" alt="Site logo"></a>
+                    <a ng-href="#/home"><img src="images/logo-2.png" alt="Site logo"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="menu_nav">
@@ -162,7 +162,7 @@
     </script>
 
 
-    <!-- firebase --> 
+    <!-- firebase -->
 
 
     <!-- build:js(.) scripts/vendor.js -->
@@ -218,10 +218,10 @@
          <script src="components/ng-components/booking/booking.component.js"></script>
          <script src="components/ng-components/booking/user-info.component.js"></script>
          <script src="components/ng-components/booking/availability-info.component.js"></script>
-         <script src="components/ng-components/booking/appliance-info.component.js"></script>  
+         <script src="components/ng-components/booking/appliance-info.component.js"></script>
          <script src="components/ng-components/booking/review.component.js"></script>
-         <script src="components/ng-components/appliances/appliances.component.js"></script> 
-         <script src="components/ng-components/appliances/brands.component.js"></script> 
+         <script src="components/ng-components/appliances/appliances.component.js"></script>
+         <script src="components/ng-components/appliances/brands.component.js"></script>
          <script  src="components/Services/booking.service.js"></script>
          <script  src="components/Services/auth.service.js"></script>
          <script  src="components/Services/firebase.service.js"></script>
@@ -236,18 +236,19 @@
 
         <!-- endbuild -->
 </body>
-<!--
+
 <script>
   var config = {
     apiKey: "AIzaSyBK9oL2UefOrdYpcxqJQDnfBRWTILJQgNA",
     authDomain: "eaglestarrepairs.firebaseapp.com",
     databaseURL: "https://eaglestarrepairs.firebaseio.com",
+    projectId: "eaglestarrepairs",
     storageBucket: "eaglestarrepairs.appspot.com",
     messagingSenderId: "743157018706"
   };
   firebase.initializeApp(config);
 </script>
--->
+  <!--
 <script>
   // Initialize Firebase
   var config = {
@@ -259,7 +260,7 @@
     messagingSenderId: "138711364180"
   };
   firebase.initializeApp(config);
-</script>
+</script>-->
 </html>
 
 

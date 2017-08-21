@@ -3,6 +3,7 @@
     angular
         .module('eagleRepairsApp')
         .config(routes)
+        .config(routeFixer)
         .constant('_', window._);
 
 
@@ -12,5 +13,10 @@
     $urlRouterProvider.otherwise('/');
 
     }
+
+    //To fix the angular 1.6 url routes changes
+  function routeFixer($locationProvider) {
+    $locationProvider.hashPrefix('');
+  }
 
 }());

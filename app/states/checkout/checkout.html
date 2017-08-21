@@ -1,68 +1,73 @@
 <div class="container">
+  <div id="alerts-container" class="text-center"></div>
 	<div class="table-responsive col-lg-12">
+
 		<table class="table" >
-		<caption><h3 style="color:red">Summary</h3></caption>
+		<caption><h3 style="color:red">Order Summary</h3></caption>
 		 	<thead>
-            	<tr>
+      <tr>
 					<th>appliance</th>
 					<th>Brand</th>
-            	</tr>
+          <th>Price</th>
+      </tr>
 			</thead>
 		<tr ng-repeat="appliance in checkout.list">
-			<td>{{appliance.type}}</td>
+			<td>{{appliance.title}}</td>
 			<td>{{appliance.brand}}</td>
+      <td>{{appliance.price}}</td>
 		</tr>
 	</table>
-	<div>
-	
-<div>
-    <h1 class="well">Checkout Form</h1>
-	
-</div>
-	<div class="col-lg-12 well">	
+    <button type="button" class="btn btn-primary" ui-sref="home" ng-if="checkout.orderPlaced">Done</button>
+    </div>
+
+  <div ng-if="!checkout.orderPlaced">
+      <h1 class="well">Your Information</h1>
+
+  </div>
+	<div class="col-lg-12 well" ng-if="!checkout.orderPlaced">
 	<div class="row">
-				<form novalidate>
+				<form name="checkoutForm" ng-submit="checkout.submitDetails()" novalidate>
 					<div class="col-sm-12">
 						<div class="row">
 							<div class="col-sm-6 form-group">
 								<label>First Name</label>
-								<input id="firstname" type="text" minlength="2" ng-model="checkout.userInfo.firstName" placeholder="Enter First Name Here.." class="form-control" required>
+								<input id="firstname" type="text" minlength="2" ng-model="checkout.userInfo.firstName" placeholder="Enter First Name" class="form-control" required>
 							</div>
 							<div class="col-sm-6 form-group">
 								<label>Last Name</label>
 								<input id="lastname" type="text" minlength="2" ng-model="checkout.userInfo.lastName" placeholder="Enter Last Name Here.." class="form-control" required>
 							</div>
-						</div>					
+						</div>
 						<div class="form-group">
 							<label>Address</label>
-							<textarea id="address" ng-model="checkout.userInfo.address" placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
-						</div>	
+							<textarea id="address" ng-model="checkout.userInfo.address" ng-model="checkout.userInfo.address"placeholder="Enter Address Here.." rows="3" class="form-control"></textarea>
+						</div>
 						<div class="row">
 							<div class="col-sm-4 form-group">
 								<label>City</label>
-								<input id="city" type="text" placeholder="Enter City Name Here.." class="form-control">
-							</div>	
+								<input id="city" type="text" ng-model="checkout.userInfo.city" placeholder="Enter City Name Here.." class="form-control">
+							</div>
 							<div class="col-sm-4 form-group">
 								<label>State</label>
-								<input id="state" type="text" placeholder="Enter State Name Here.." class="form-control">
-							</div>	
+								<input id="state" type="text" placeholder="Enter State Name Here.." ng-model="checkout.userInfo.state" class="form-control">
+							</div>
 							<div class="col-sm-4 form-group">
 								<label>Zip</label>
-								<input id="zip" type="text" placeholder="Enter Zip Code Here.." class="form-control">
-							</div>		
+								<input id="zip" type="text" placeholder="Enter Zip Code Here.."  ng-model="checkout.userInfo.zipCode" class="form-control">
+							</div>
 						</div>
-												
+
 					<div class="form-group">
 						<label>Phone Number</label>
-						<input id="phone" type="text" placeholder="Enter Phone Number Here.." class="form-control">
-					</div>		
+						<input id="phone" type="text" placeholder="Enter Phone Number Here.." ng-model="checkout.userInfo.phoneNumber" class="form-control">
+					</div>
 					<div class="form-group">
 						<label>Email Address</label>
-						<input id="email" type="text" placeholder="Enter Email Address Here.." class="form-control">
-					</div>	
-					<button type="submit" ng-click="checkout.submitDetails()" class="btn btn-primary btn-lg btn-info">Submit</button>					
+						<input id="email" type="email" placeholder="Enter Email Address Here.." ng-model="checkout.userInfo.email" class="form-control">
 					</div>
-				</form> 
-				</div>
+					<button type="submit" ng-disabled="checkoutForm.$invalid" class="btn btn-primary btn-lg btn-info">Submit</button>
+					</div>
+				</form>
+  </div>
 	</div>
 	</div>

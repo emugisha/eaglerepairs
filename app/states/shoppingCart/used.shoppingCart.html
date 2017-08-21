@@ -17,7 +17,7 @@
             </tr>
             </thead>
               <tr ng-repeat=" appliance in cart.listItems">
-                <td><img ng-src="{{appliance.imageUrl}}"   width="100" height="100"  alt="{{appliance.brand}}"</td>
+                <td><img ng-src="{{appliance.imageUrl}}"   width="100" height="100"  alt="{{appliance.brand}}"> </td>
                 <td>{{appliance.type}}</td>
                 <td>{{appliance.details}}</td>
                 <td>{{appliance.price | currency}}</td>
@@ -33,7 +33,7 @@
         </table>
         <div>
             <button type="button" class="btn btn-primary" ui-sref="used" >Continue shopping</button>
-            <button type="button" class="btn btn-danger" ui-sref="checkout">Checkout</button>
+            <button type="button" class="btn btn-danger" ui-sref="checkout" ng-disabled="cart.listItems.length == 0">Checkout</button>
         </div>
-    </div>  
+    </div>
 </div>
