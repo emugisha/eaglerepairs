@@ -27,7 +27,7 @@
       }
 
       function getAllOrdersRef(){
-           return databaseRef.ref().child('orders');
+           return databaseRef.ref().child('Orders/recent');
       }
 
       //to update the used list
