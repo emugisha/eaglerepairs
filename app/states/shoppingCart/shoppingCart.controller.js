@@ -15,12 +15,12 @@
    var vm = this;
    // Read the data from the CartService
   vm.listItems = CartService.getList();
-
+  vm.totalCost = 0;
   //update the cart after deleting an appliance
    vm.removeFromCart = removeFromCart;
    vm.addBack = addBack;
    vm.getTotalPrice = getTotalPrice;
-
+   vm.getTotalPrice();
 
   function removeFromCart(appliance){
     CartService.updateCart(appliance);
@@ -30,11 +30,11 @@
       UsedApplianceService.add(appliance);
   }
   // to calculate the total price
-  function getTotalPrice(appliance){
+  function getTotalPrice(){
     var total=0;
     for (var i = 0; i < vm.listItems.length; i++){
       var item=vm.listItems[i];
-      total+=item.price;
+      vm.totalCost+=item.price;
     }
     return total;
   }
