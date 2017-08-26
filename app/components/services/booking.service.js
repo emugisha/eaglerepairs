@@ -19,9 +19,6 @@
                   updates['/Bookings/NewBookings/' + newId + '/appliance'] = booking.appliance;
                   updates['/Bookings/NewBookings/'  + newId + '/clientDetails'] = booking.clientDetails;
                   updates['/Bookings/NewBookings/'  + newId + '/availability'] = booking.availability;
-                  console.log("availability");
-                  console.log(booking.availability);
-
                   return databaseRef.ref().update(updates);
 
 

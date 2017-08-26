@@ -34,7 +34,6 @@
 
    function getAllAppliances(){
       vm.allAppliances = $firebaseArray(UsedApplianceService.getAllUsedAppliances());
-      console.log(vm.allAppliances);
     }
 
     function goToDetails(appliance){

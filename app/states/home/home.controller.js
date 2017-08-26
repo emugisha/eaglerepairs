@@ -23,14 +23,13 @@
                            'images/brands/admiral.jpg'];
 
 
-        
+
 
         function gotoReviews(){
-            console.log("reviews");
             $location.hash('reviews');
             $anchorScroll();
         }
-     
+
     }
 
 }());

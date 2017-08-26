@@ -13,15 +13,12 @@
 
     var vm = this;
     vm.applianceDetails = UsedApplianceService.getSelectedAppliance();
-    console.log(vm.applianceDetails);
+    vm.addToCart = addToCart;
     if(!vm.applianceDetails) {
       $state.go('used');
     }else{
       vm.selectedImage = vm.applianceDetails.imageUrls[0];
     }
-
-    vm.addToCart = addToCart;
-    console.log(vm.applianceDetails);
 
     function addToCart() {
       vm.applianceDetails.available = false;

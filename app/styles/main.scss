@@ -1,5 +1,5 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-
+$fa-font-path: "/bower_components/components-font-awesome/fonts/";
 $warning:#efbb20;
 $success: #34404e;
 $success2:#337ab7;
@@ -358,7 +358,7 @@ form.ng-submitted, form.ng-dirty .ng-invalid {
 
 .product-box{
 		padding-top:10px;
-		padding-bottom:10px;		
+		padding-bottom:10px;
 }
 .product-box:hover{
 		background-color:#f8f8f8;

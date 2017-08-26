@@ -24,19 +24,21 @@
 
   function removeFromCart(appliance){
     CartService.updateCart(appliance);
+    vm.getTotalPrice();
   }
   //add back to used list
   function addBack(appliance){
       UsedApplianceService.add(appliance);
+      vm.getTotalPrice();
   }
   // to calculate the total price
   function getTotalPrice(){
-    var total=0;
-    for (var i = 0; i < vm.listItems.length; i++){
-      var item=vm.listItems[i];
-      vm.totalCost+=item.price;
+    vm.totalCost = 0;
+    var cartList = CartService.getList();
+    for (var i = 0; i < cartList.length; i++){
+      var item=cartList[i];
+      vm.totalCost+= parseFloat(item.price);
     }
-    return total;
   }
 
  }

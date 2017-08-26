@@ -16,6 +16,5 @@
 
     vm.chunks= Math.floor(vm.allAppliances.length/3);
     vm.groupedAppliances = _.chunk(vm.allAppliances, vm.chunks);
-  console.log(vm.groupedAppliances);
   }
 }());
